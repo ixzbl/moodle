@@ -109,6 +109,8 @@ class task_log extends base {
             ->set_is_sortable(true)
             ->add_callback(static function($value, stdClass $row): string {
                 $classname = $row->classname;
+            ->add_callback(static function($value, stdClass $row): string {
+                $classname = $row->classname;
                 $output = '';
                 $taskidlabel = new lang_string('taskid', 'admin'); // Fetch 'Task ID' string.
 
