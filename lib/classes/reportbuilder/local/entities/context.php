@@ -225,7 +225,8 @@ class context extends base {
             $this->get_entity_name(),
             "{$contextalias}.path"
         ))
-            ->add_joins($this->get_joins());
+            ->add_joins($this->get_joins())
+            ->set_default_match('contains'); // sets default to "contains"
 
         return $filters;
     }
